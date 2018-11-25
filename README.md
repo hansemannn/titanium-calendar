@@ -10,7 +10,6 @@ An easy to use iOS modal calendar for selecting dates. Based on the awesome [PDT
 var TiCalendar = require('ti.calendar');
 
 var win = Ti.UI.createWindow({
-  title: 'Select Date',
   backgroundColor: '#fff'
 });
 
@@ -21,7 +20,8 @@ var button = Ti.UI.createButton({
 win.add(button);
 
 const calendar = TiCalendar.createCalendar({
-  title: 'Select Date',
+  // All optional
+  title: L('Select Date', 'Select Date'),
   value: new Date(),
   circleBackgroundColor: '#fff',
   circleSelectedBackgroundColor: '#f00',
@@ -39,11 +39,7 @@ button.addEventListener('click', function() {
   calendar.show();
 });
 
-var nav = Ti.UI.iOS.createNavigationWindow({
-  window: win
-});
-
-nav.open();
+win.open();
 ```
 
 ## License
