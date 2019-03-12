@@ -4,7 +4,14 @@ An easy to use iOS modal calendar for selecting dates. Based on the awesome [PDT
 
 <img src="./screenshot.png" height="400" />
 
-## Example
+## Features
+
+1. Show the calendar modally
+2. Show the calendar in a view of your desire
+
+## Examples
+
+###  Calendar Dialog (modally)
 
 ```js
 var TiCalendar = require('ti.calendar');
@@ -40,6 +47,58 @@ button.addEventListener('click', function() {
 });
 
 win.open();
+```
+
+### Calendar View
+
+```js
+var TiCalendar = require('ti.calendar');
+
+var selectedDate = new Date();
+
+var win = Ti.UI.createWindow({
+  title: 'Select Date',
+  backgroundColor: '#fff'
+});
+
+var button = Ti.UI.createButton({
+  title: 'Show calendar'
+});
+
+win.add(button);
+
+button.addEventListener('click', function() {
+  const calendar = TiCalendar.createCalendarView({
+    title: 'Select Date',
+    value: selectedDate,
+    circleBackgroundColor: '#fff',
+    circleSelectedBackgroundColor: '#f00',
+    textColor: '#000',
+    textSelectedColor: '#fff',
+    todayTextColor: '#333',
+    todayCircleBackgroundColor: '#dbdbdb'
+  });
+
+  calendar.addEventListener('change', function(e) {
+    Ti.API.warn('Selected date: ' + e.date);
+    selectedDate = e.date;
+  });
+
+  var win2 = Ti.UI.createWindow({
+    title: 'Select Date',
+    backgroundColor: '#fff'
+  });
+
+  win2.add(calendar);
+
+  nav.openWindow(win2);
+});
+
+var nav = Ti.UI.iOS.createNavigationWindow({
+  window: win
+});
+
+nav.open();
 ```
 
 ## License
