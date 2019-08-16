@@ -3,3 +3,4 @@ Carthage/
 ti.calendar-iphone-*.zip
 /Cartfile.resolved
 .DS_Store
+/dist

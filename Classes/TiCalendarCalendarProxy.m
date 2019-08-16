@@ -18,6 +18,7 @@
   
     NSString *title = args[@"title"];
     NSDate *value = args[@"value"];
+    NSDate *maxDate = args[@"maxDate"];
     UIColor *circleBackgroundColor = args[@"circleBackgroundColor"];
     UIColor *circleSelectedBackgroundColor = args[@"circleSelectedBackgroundColor"];
     UIColor *textColor = args[@"textColor"];
@@ -59,6 +60,8 @@
     if (value != nil) {
       _currentCalendar.selectedDate = value;
     }
+
+    _currentCalendar.lastDate = maxDate ?: [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear value:3 toDate:[NSDate date] options:0];;
 
     // Add cancel button
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel")

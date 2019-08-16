@@ -20,13 +20,23 @@
   
     NSString *title = params[@"title"];
     NSDate *value = params[@"value"];
-    UIColor *circleBackgroundColor = params[@"circleBackgroundColor"];
-    UIColor *circleSelectedBackgroundColor = params[@"circleSelectedBackgroundColor"];
-    UIColor *textColor = params[@"textColor"];
-    UIColor *textSelectedColor = params[@"textSelectedColor"];
-    UIColor *todayTextColor = params[@"todayTextColor"];
-    UIColor *todayCircleBackgroundColor = params[@"todayCircleBackgroundColor"];
-    
+    NSDate *maxDate = params[@"maxDate"];
+    id circleBackgroundColor = params[@"circleBackgroundColor"];
+    id circleSelectedBackgroundColor = params[@"circleSelectedBackgroundColor"];
+    id textColor = params[@"textColor"];
+    id textSelectedColor = params[@"textSelectedColor"];
+    id todayTextColor = params[@"todayTextColor"];
+    id todayCircleBackgroundColor = params[@"todayCircleBackgroundColor"];
+
+    calendar.lastDate = maxDate ?: [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear
+                                                                            value:1
+                                                                           toDate:[NSDate date]
+                                                                          options:0];
+
+    if (value != nil) {
+      calendar.selectedDate = value;
+    }
+
     if (circleBackgroundColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setCircleDefaultColor:[TiUtils colorValue:circleBackgroundColor].color];
     }
@@ -54,10 +64,6 @@
     if (title != nil) {
       calendar.navigationItem.title = title;
     }
-    
-    if (value != nil) {
-      calendar.selectedDate = value;
-    }
   }
   
   return self;
@@ -66,6 +72,13 @@
 - (TiCalendarCalendarView *)calendarView
 {
   return (TiCalendarCalendarView *)self.view;
+}
+
+- (void)scrollToSelectedDate:(id)value
+{
+  TiThreadPerformOnMainThread(^{
+    [[[self calendarView] calender] scrollToSelectedDate:NO];
+  }, NO);
 }
 
 @end
