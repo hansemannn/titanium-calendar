@@ -28,6 +28,11 @@
     id todayTextColor = params[@"todayTextColor"];
     id todayCircleBackgroundColor = params[@"todayCircleBackgroundColor"];
 
+    calendar.firstDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear
+                                                                  value:-3
+                                                                 toDate:[NSDate date]
+                                                                options:0];
+
     calendar.lastDate = maxDate ?: [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear
                                                                             value:1
                                                                            toDate:[NSDate date]
