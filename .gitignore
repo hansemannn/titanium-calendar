@@ -4,3 +4,5 @@ ti.calendar-iphone-*.zip
 /Cartfile.resolved
 .DS_Store
 /dist
+android/dist
+android/build
