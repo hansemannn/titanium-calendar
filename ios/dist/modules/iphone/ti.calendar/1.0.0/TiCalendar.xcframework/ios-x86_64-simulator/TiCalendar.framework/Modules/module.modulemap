@@ -1,0 +1,11 @@
+framework module TiCalendar {
+  umbrella header "TiCalendar.h"
+
+  export *
+  module * { export * }
+}
+
+module TiCalendar.Swift {
+    header "TiCalendar-Swift.h"
+    requires objc
+}
