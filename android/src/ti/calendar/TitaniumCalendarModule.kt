@@ -30,12 +30,16 @@ class TitaniumCalendarModule: KrollModule() {
 	fun showDatePicker(params: KrollDict) {
 		val value: Date = params["value"] as? Date ?: Date()
 		val callback = params["callback"] as? KrollFunction
+		val title = params["title"] as? String
 
 		val builder = MaterialDatePicker.Builder.datePicker()
 		val activity = TiApplication.getAppCurrentActivity() as FragmentActivity
 
 		builder.setSelection(value.time)
-		builder.setInputMode()
+
+		title?.let {
+			builder.setTitleText(title)
+		}
 
 		val picker = builder.build()
 		picker.addOnNegativeButtonClickListener { picker.dismiss() }
@@ -53,11 +57,16 @@ class TitaniumCalendarModule: KrollModule() {
 	fun showDateRangePicker(params: KrollDict) {
 		val value: Date = params["value"] as? Date ?: Date()
 		val callback = params["callback"] as? KrollFunction
+	    val title = params["title"] as? String
 
 		val builder = MaterialDatePicker.Builder.dateRangePicker()
 		val activity = TiApplication.getAppCurrentActivity() as FragmentActivity
 
 		builder.setSelection(androidx.core.util.Pair(value.time, value.time))
+
+		title?.let {
+			builder.setTitleText(title)
+		}
 
 		val picker = builder.build()
 		picker.addOnNegativeButtonClickListener { picker.dismiss() }
