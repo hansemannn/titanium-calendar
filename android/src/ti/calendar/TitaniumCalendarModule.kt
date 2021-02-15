@@ -9,19 +9,15 @@
 
 package ti.calendar
 
-import android.R
-import android.app.AlertDialog
-import android.view.LayoutInflater
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.datepicker.MaterialTextInputPicker
 import org.appcelerator.kroll.KrollDict
 import org.appcelerator.kroll.KrollFunction
 import org.appcelerator.kroll.KrollModule
 import org.appcelerator.kroll.annotations.Kroll
 import org.appcelerator.titanium.TiApplication
+import java.text.SimpleDateFormat
 import java.util.*
-
 
 @Kroll.module(name = "TitaniumCalendar", id = "ti.calendar")
 class TitaniumCalendarModule: KrollModule() {
@@ -45,12 +41,12 @@ class TitaniumCalendarModule: KrollModule() {
 		picker.addOnNegativeButtonClickListener { picker.dismiss() }
 		picker.addOnPositiveButtonClickListener {
 			val event = KrollDict()
-			event["date"] = Date(it)
+			event["date"] = utcDate(it)
 
 			callback?.call(krollObject, event)
 		}
 
-		picker.show(activity.supportFragmentManager!!, picker.toString())
+		picker.show(activity.supportFragmentManager, picker.toString())
 	}
 
 	@Kroll.method
@@ -74,15 +70,31 @@ class TitaniumCalendarModule: KrollModule() {
 			val event = KrollDict()
 
 			it.first?.let { startDate ->
-				event["startDate"] = Date(startDate)
+				event["startDate"] = utcDate(startDate)
 			}
 			it.second?.let { endDate ->
-				event["endDate"] = Date(endDate)
+				event["endDate"] = utcDate(endDate)
 			}
 
 			callback?.call(krollObject, event)
 		}
 
-		picker.show(activity.supportFragmentManager!!, picker.toString())
+		picker.show(activity.supportFragmentManager, picker.toString())
+	}
+
+	// FIXME: Remove this hack once the material date picker handles this properly
+	// SEE: https://github.com/material-components/material-components-android/issues/882#issuecomment-638983598
+	private fun utcDate(it: Long): Date? {
+		val utcTime = Date(it)
+		val format = "yyy/MM/dd HH:mm:ss"
+		val sdf = SimpleDateFormat(format, Locale.getDefault())
+		sdf.timeZone = TimeZone.getTimeZone("UTC")
+		val gmtTime = SimpleDateFormat(format, Locale.getDefault()).parse(sdf.format(utcTime))
+
+		gmtTime?.let {  date ->
+			return date
+		}
+
+		return null
 	}
 }
