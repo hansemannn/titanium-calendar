@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0.1
+version: 1.1.0
 apiversion: 2
 architectures: armv7 arm64 i386 x86_64
 description: titanium-calendar
@@ -15,4 +15,4 @@ name: titanium-calendar
 moduleid: ti.calendar
 guid: 2eeb279e-c99e-4d61-ac20-5aeb15767750
 platform: iphone
-minsdk: 7.5.0.GA
+minsdk: 9.0.0
