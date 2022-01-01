@@ -6,3 +6,4 @@ ti.calendar-iphone-*.zip
 /dist
 android/dist
 android/build
+ios/build
