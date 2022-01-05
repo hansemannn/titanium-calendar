@@ -15,6 +15,7 @@ import org.appcelerator.kroll.KrollDict
 import org.appcelerator.kroll.KrollFunction
 import org.appcelerator.kroll.KrollModule
 import org.appcelerator.kroll.annotations.Kroll
+import org.appcelerator.kroll.common.Log
 import org.appcelerator.titanium.TiApplication
 import java.text.SimpleDateFormat
 import java.util.*
@@ -51,14 +52,18 @@ class TitaniumCalendarModule: KrollModule() {
 
 	@Kroll.method
 	fun showDateRangePicker(params: KrollDict) {
-		val value: Date = params["value"] as? Date ?: Date()
+		val value = params.getKrollDict("value")
+
+		val startDate = value["startDate"] as? Date ?: Date()
+		val endDate = value["endDate"] as? Date ?: Date()
+
 		val callback = params["callback"] as? KrollFunction
 	    val title = params["title"] as? String
 
 		val builder = MaterialDatePicker.Builder.dateRangePicker()
 		val activity = TiApplication.getAppCurrentActivity() as FragmentActivity
 
-		builder.setSelection(androidx.core.util.Pair(value.time, value.time))
+		builder.setSelection(androidx.core.util.Pair(startDate.time, endDate.time))
 
 		title?.let {
 			builder.setTitleText(title)
