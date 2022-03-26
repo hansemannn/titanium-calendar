@@ -71,6 +71,8 @@ button.addEventListener('click', function() {
   const calendar = TiCalendar.createCalendarView({
     title: 'Select Date',
     value: selectedDate,
+    //firstValue: new Date(2021, 11, 10),
+    //maxValue: new Date(2022, 2, 2)
     circleBackgroundColor: '#fff',
     circleSelectedBackgroundColor: '#f00',
     textColor: '#000',
@@ -94,7 +96,7 @@ button.addEventListener('click', function() {
   nav.openWindow(win2);
 });
 
-var nav = Ti.UI.iOS.createNavigationWindow({
+var nav = Ti.UI.createNavigationWindow({
   window: win
 });
 

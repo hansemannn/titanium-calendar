@@ -15,12 +15,13 @@
 {
   if (self = [super _initWithPageContext:context args:args]) {
     PDTSimpleCalendarViewController *calendar = [[self calendarView] calender];
-    
+
     NSDictionary<NSString *, id> *params = args[0];
-  
+
     NSString *title = params[@"title"];
     NSDate *value = params[@"value"];
     NSDate *maxDate = params[@"maxDate"];
+    NSDate *firstDate = params[@"firstDate"];
     id circleBackgroundColor = params[@"circleBackgroundColor"];
     id circleSelectedBackgroundColor = params[@"circleSelectedBackgroundColor"];
     id textColor = params[@"textColor"];
@@ -28,7 +29,7 @@
     id todayTextColor = params[@"todayTextColor"];
     id todayCircleBackgroundColor = params[@"todayCircleBackgroundColor"];
 
-    calendar.firstDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear
+    calendar.firstDate =  firstDate ?: [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitYear
                                                                   value:-3
                                                                  toDate:[NSDate date]
                                                                 options:0];
@@ -45,32 +46,32 @@
     if (circleBackgroundColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setCircleDefaultColor:[TiUtils colorValue:circleBackgroundColor].color];
     }
-    
+
     if (circleSelectedBackgroundColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setCircleSelectedColor:[TiUtils colorValue:circleSelectedBackgroundColor].color];
     }
-    
+
     if (textColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setTextDefaultColor:[TiUtils colorValue:textColor].color];
     }
-    
+
     if (textSelectedColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setTextSelectedColor:[TiUtils colorValue:textSelectedColor].color];
     }
-    
+
     if (todayCircleBackgroundColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setCircleTodayColor:[TiUtils colorValue:todayCircleBackgroundColor].color];
     }
-    
+
     if (todayTextColor != nil) {
       [[PDTSimpleCalendarViewCell appearance] setTextTodayColor:[TiUtils colorValue:todayTextColor].color];
     }
-    
+
     if (title != nil) {
       calendar.navigationItem.title = title;
     }
   }
-  
+
   return self;
 }
 
