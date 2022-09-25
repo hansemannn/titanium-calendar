@@ -6,7 +6,7 @@
  */
 
 #import "TiUIView.h"
-#import <PDTSimpleCalendar/PDTSimpleCalendar.h>
+#import "PDTSimpleCalendar.h"
 
 @interface TiCalendarCalendarView : TiUIView<PDTSimpleCalendarViewDelegate> {
   PDTSimpleCalendarViewController *_calendar;

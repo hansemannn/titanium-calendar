@@ -26,13 +26,17 @@
 		24DD6CFA1134B3F500162E58 /* TiCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiCalendarModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiCalendarModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiCalendarModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiCalendarModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiCalendarModuleAssets.m */; };
-		3A00C8CC21AAD02A00861926 /* GLCalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A00C8CB21AAD02A00861926 /* GLCalendarView.framework */; };
 		3A00C8E121AB11BE00861926 /* TiCalendarCalendarProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A00C8DF21AB11BE00861926 /* TiCalendarCalendarProxy.h */; };
 		3A00C8E221AB11BE00861926 /* TiCalendarCalendarProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A00C8E021AB11BE00861926 /* TiCalendarCalendarProxy.m */; };
 		3A0AB2D52237B9D1007B1D00 /* TiCalendarCalendarViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0AB2D32237B9D1007B1D00 /* TiCalendarCalendarViewProxy.h */; };
 		3A0AB2D62237B9D1007B1D00 /* TiCalendarCalendarViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB2D42237B9D1007B1D00 /* TiCalendarCalendarViewProxy.m */; };
 		3A0AB2D92237B9DE007B1D00 /* TiCalendarCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0AB2D72237B9DE007B1D00 /* TiCalendarCalendarView.h */; };
 		3A0AB2DA2237B9DE007B1D00 /* TiCalendarCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB2D82237B9DE007B1D00 /* TiCalendarCalendarView.m */; };
+		3AB3674E28E0639000C40E77 /* PDTSimpleCalendarViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3674428E0639000C40E77 /* PDTSimpleCalendarViewHeader.m */; };
+		3AB3674F28E0639000C40E77 /* PDTSimpleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3674C28E0639000C40E77 /* PDTSimpleCalendarViewController.m */; };
+		3AB3675028E0639000C40E77 /* PDTSimpleCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3674328E0639000C40E77 /* PDTSimpleCalendarViewCell.m */; };
+		3AB3675128E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3674828E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.m */; };
+		3AB3675228E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3674928E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.m */; };
 		AA747D9F0F9514B9006C5449 /* TiCalendar_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiCalendar_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -53,13 +57,23 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* TiCalendarModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiCalendarModuleAssets.h; path = Classes/TiCalendarModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiCalendarModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiCalendarModuleAssets.m; path = Classes/TiCalendarModuleAssets.m; sourceTree = "<group>"; };
-		3A00C8CB21AAD02A00861926 /* GLCalendarView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLCalendarView.framework; path = platform/GLCalendarView.framework; sourceTree = "<group>"; };
 		3A00C8DF21AB11BE00861926 /* TiCalendarCalendarProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCalendarCalendarProxy.h; path = Classes/TiCalendarCalendarProxy.h; sourceTree = "<group>"; };
 		3A00C8E021AB11BE00861926 /* TiCalendarCalendarProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiCalendarCalendarProxy.m; path = Classes/TiCalendarCalendarProxy.m; sourceTree = "<group>"; };
 		3A0AB2D32237B9D1007B1D00 /* TiCalendarCalendarViewProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCalendarCalendarViewProxy.h; path = Classes/TiCalendarCalendarViewProxy.h; sourceTree = "<group>"; };
 		3A0AB2D42237B9D1007B1D00 /* TiCalendarCalendarViewProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiCalendarCalendarViewProxy.m; path = Classes/TiCalendarCalendarViewProxy.m; sourceTree = "<group>"; };
 		3A0AB2D72237B9DE007B1D00 /* TiCalendarCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCalendarCalendarView.h; path = Classes/TiCalendarCalendarView.h; sourceTree = "<group>"; };
 		3A0AB2D82237B9DE007B1D00 /* TiCalendarCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiCalendarCalendarView.m; path = Classes/TiCalendarCalendarView.m; sourceTree = "<group>"; };
+		3AB3674328E0639000C40E77 /* PDTSimpleCalendarViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewCell.m; sourceTree = "<group>"; };
+		3AB3674428E0639000C40E77 /* PDTSimpleCalendarViewHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewHeader.m; sourceTree = "<group>"; };
+		3AB3674528E0639000C40E77 /* PDTSimpleCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendar.h; sourceTree = "<group>"; };
+		3AB3674628E0639000C40E77 /* PDTSimpleCalendarViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewCell.h; sourceTree = "<group>"; };
+		3AB3674728E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewFlowLayout.h; sourceTree = "<group>"; };
+		3AB3674828E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewFlowLayout.m; sourceTree = "<group>"; };
+		3AB3674928E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewWeekdayHeader.m; sourceTree = "<group>"; };
+		3AB3674A28E0639000C40E77 /* PDTSimpleCalendarViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewHeader.h; sourceTree = "<group>"; };
+		3AB3674B28E0639000C40E77 /* PDTSimpleCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewController.h; sourceTree = "<group>"; };
+		3AB3674C28E0639000C40E77 /* PDTSimpleCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewController.m; sourceTree = "<group>"; };
+		3AB3674D28E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewWeekdayHeader.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiCalendar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiCalendar_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libti.calendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.calendar.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A00C8CC21AAD02A00861926 /* GLCalendarView.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +113,6 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A00C8CB21AAD02A00861926 /* GLCalendarView.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -109,6 +121,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3AB3675328E0639E00C40E77 /* PDTSimpleCalendar */,
 				24DE9E0F11C5FE74003F90F6 /* TiCalendarModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* TiCalendarModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* TiCalendarModule.h */,
@@ -130,6 +143,24 @@
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3AB3675328E0639E00C40E77 /* PDTSimpleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3674528E0639000C40E77 /* PDTSimpleCalendar.h */,
+				3AB3674628E0639000C40E77 /* PDTSimpleCalendarViewCell.h */,
+				3AB3674328E0639000C40E77 /* PDTSimpleCalendarViewCell.m */,
+				3AB3674B28E0639000C40E77 /* PDTSimpleCalendarViewController.h */,
+				3AB3674C28E0639000C40E77 /* PDTSimpleCalendarViewController.m */,
+				3AB3674728E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.h */,
+				3AB3674828E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.m */,
+				3AB3674A28E0639000C40E77 /* PDTSimpleCalendarViewHeader.h */,
+				3AB3674428E0639000C40E77 /* PDTSimpleCalendarViewHeader.m */,
+				3AB3674D28E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.h */,
+				3AB3674928E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.m */,
+			);
+			name = PDTSimpleCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +205,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1400;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-calendar" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -182,10 +213,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				Base,
-				ja,
 				en,
-				fr,
-				de,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* titanium-calendar */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -219,9 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB3674E28E0639000C40E77 /* PDTSimpleCalendarViewHeader.m in Sources */,
+				3AB3675228E0639000C40E77 /* PDTSimpleCalendarViewWeekdayHeader.m in Sources */,
 				3A0AB2DA2237B9DE007B1D00 /* TiCalendarCalendarView.m in Sources */,
 				24DD6CFA1134B3F500162E58 /* TiCalendarModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiCalendarModuleAssets.m in Sources */,
+				3AB3675128E0639000C40E77 /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
+				3AB3674F28E0639000C40E77 /* PDTSimpleCalendarViewController.m in Sources */,
+				3AB3675028E0639000C40E77 /* PDTSimpleCalendarViewCell.m in Sources */,
 				3A0AB2D62237B9D1007B1D00 /* TiCalendarCalendarViewProxy.m in Sources */,
 				3A00C8E221AB11BE00861926 /* TiCalendarCalendarProxy.m in Sources */,
 			);
@@ -266,7 +299,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -314,7 +347,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
@@ -345,6 +378,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -375,6 +409,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -410,6 +445,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -437,7 +473,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ti.calendar;

@@ -6,7 +6,7 @@
  */
 
 #import "TiCalendarCalendarViewProxy.h"
-#import <PDTSimpleCalendar/PDTSimpleCalendar.h>
+#import "PDTSimpleCalendar.h"
 #import "TiUtils.h"
 
 @implementation TiCalendarCalendarViewProxy

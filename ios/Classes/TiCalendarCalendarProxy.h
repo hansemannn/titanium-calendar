@@ -6,7 +6,7 @@
  */
 
 #import "TiProxy.h"
-#import <PDTSimpleCalendar/PDTSimpleCalendar.h>
+#import "PDTSimpleCalendar.h"
 
 @interface TiCalendarCalendarProxy : TiProxy<PDTSimpleCalendarViewDelegate> {
   PDTSimpleCalendarViewController *_currentCalendar;
